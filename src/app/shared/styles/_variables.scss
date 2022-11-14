@@ -1,0 +1,94 @@
+$body: rgb(242, 246, 250);
+$mainCol: #b5d8f7;
+$lightText: #707070;
+$lightBorder: #bdbbbb;
+$lighterBorder: #d6d1d1a9;
+$darkText: #252525;
+$greenText: #27ae60;
+$yellowText: #f2c94c;
+$redCol:#eb2020;
+
+//Amimation border
+%border {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  &:hover {
+    animation: drawborder 500ms linear forwards;
+  }
+}
+@keyframes drawborder {
+  25% {
+    border-top-color: $mainCol;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  50% {
+    border-top-color: $mainCol;
+    border-right-color: $mainCol;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  75% {
+    border-top-color: $mainCol;
+    border-right-color: $mainCol;
+    border-bottom-color: $mainCol;
+    border-left-color: transparent;
+  }
+  100% {
+    border-color: $mainCol;
+  }
+}
+//----End Amimation border
+
+%logoHeader {
+  border-top: 7px solid $mainCol;
+  margin: 140px auto 20px;
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+%btn__admin {
+  width: 250px;
+  height: 50px;
+  border: 3px solid $mainCol;
+  border-radius: 5px;
+  background-color: $body;
+  font-size: 18px;
+  font-weight: bold;
+  color: $darkText;
+  &:hover {
+    background-color: $mainCol;
+    font-size: 20px;
+  }
+}
+
+%BORDER {
+  padding: 10px 20px;
+  border: 1px solid $lightBorder;
+  outline: none;
+  border-radius: 10px;
+  color: $lightText;
+  font-size: 18px;
+  &:focus {
+    border: 2px solid $mainCol;
+    box-shadow: 0 0 5px 1px $mainCol;
+  }
+}
+
+%btnBlue {
+  border-radius: 5px;
+  margin: 25px;
+  border: 4px solid $mainCol;
+  background-color: $mainCol;
+  font-size: 25px;
+  font-weight: bolder;
+  color: $darkText;
+  &:hover {
+    background-color: $body;
+    font-size: 20px;
+    color: $lightText;
+  }
+}

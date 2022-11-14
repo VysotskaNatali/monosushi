@@ -1,0 +1,62 @@
+{
+  "discounts": [
+    {
+      "id": 1,
+      "name": "рол тижня",
+      "title": "50% знижки на \"Рол тижня\"",
+      "description": "- Щотижня діє знижка 50% на один з ролів у нашому меню <br>\n- “Рол тижня” ви можете знайти на головній сторінці нашого сайту. <br>\n- Знижка діє при мінімальній сумі замовлення 300 грн. <br>\n- Ця акція не поєднується з іншими акціями ",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/discounts%2F50%25.png?alt=media&token=fd6ce019-d18e-4855-9c48-9685eb8313c9",
+      "data": "2022-11-14T18:25:23.756Z"
+    },
+    {
+      "id": 2,
+      "name": "\"3+1=5\"",
+      "title": "\"3+1=5\"",
+      "description": "\nЗамовляйте 5 ролів, а платіть за 4.<br>\nЗамовляйте 10 ролів, а платіть за 8 і так далі.<br>\nБезкоштовним вважається рол з найменшою вартістю.<br>\nЦя акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/discounts%2F5rolls4.png?alt=media&token=c4eaed44-21a0-4f2d-bdde-c114a3ed6728",
+      "data": "2022-11-14T18:26:24.876Z"
+    },
+    {
+      "name": "Самовивіз",
+      "title": "Самовивіз",
+      "description": "Забирайте своє замовлення самостійно та отримуйте такі переваги: <br><br>\n\n- Запечені моно макі з лососем у подарунок.<br>\n- Відсутність мінімальної суми замовлення.<br><br>\nЧас очікування на замовлення до 30 хв.<br>\n- Для отримання акційного ролу у подарунок зберігається умова мінімальної суми замовлення 300 грн.<br>\n- Ця акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/discounts%2Fdelivery.png?alt=media&token=bbb8f9eb-ae37-40d7-bb8d-a73092137930",
+      "data": "2022-11-14T18:28:10.063Z",
+      "id": 3
+    },
+    {
+      "name": "День народження з Моносуші",
+      "title": "День народження з Моносуші",
+      "description": "При оформленні замовлення вкажіть промокод “День народження” та отримайте “Запечений сет” безкоштовно до Вашого замовлення. <br>\nТермін дії акції – День народження плюс один день до та після свята. <br>\nЦя акція починає діяти при мінімальній сумі замовлення 750 грн. <br>\nДля отримання подарунку іменинник має показати кур’єру оригінал документу, що підтверджує його дату народження. <br>\nЦя акція не поєднується з іншими акціями.",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/discounts%2FhappyB.png?alt=media&token=cbc1000e-42bf-4cf7-8301-3896be1ce415",
+      "data": "2022-11-14T18:28:29.899Z",
+      "id": 4
+    }
+  ],
+  "categories": [
+    {
+      "name": "сети",
+      "path": "sets",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fnav-img-sets.svg?alt=media&token=961a5b8b-bb2d-4035-9d37-1344b9d3f210",
+      "id": 1
+    },
+    {
+      "name": "роли",
+      "path": "rolls",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fnav-img-rolls.svg?alt=media&token=f60cb596-4ec2-48e7-9180-3fe477411501",
+      "id": 2
+    },
+    {
+      "name": "напої",
+      "path": "drinks",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fnav-img-drinks.svg?alt=media&token=9c0aa567-2300-4059-9086-6ba1bce5fc51",
+      "id": 3
+    },
+    {
+      "name": "jjjjj",
+      "path": "mmmmm",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fbasket.svg?alt=media&token=caf28743-ebf8-49b5-8df3-a3d1cb907d1c",
+      "id": 4
+    }
+  ]
+}

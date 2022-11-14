@@ -1,0 +1,78 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+.action__btn{
+ @extend %btn__admin;
+}
+.table{
+    margin-top: 50px;
+    width: 100%;
+    border-bottom: 2px solid $lighterBorder;
+    &__btn{
+        width: 60%;
+        border: 2px solid transparent;
+        background-color: transparent;
+        color: $mainCol;
+        text-align: start;    
+    }
+}
+th, td{
+    border-bottom: 2px solid $lighterBorder;
+    padding: 20px;
+    color: $darkText; 
+    text-align: start;
+}
+td{
+    width: 16%;
+}
+
+.form{
+    width: 60%;
+    margin-top: 50px;
+    &__input{
+        width: 48%;
+        height: 60px;
+        margin-right: 2%;
+        @extend %BORDER;
+    }
+    &__textarea{
+        width: 98%;
+        height: 150px;
+        margin: 20px 0;
+        @extend %BORDER;
+    }
+    &__file{
+        width: 98%;
+        height: 50px;
+        @extend %BORDER;
+    }
+    &__btn{
+        width: 200px;
+        height: 50px; 
+      @extend %btnBlue; 
+    }
+    &__upload{
+     margin: 15px auto;
+     width: 50%;
+     height: 25px;
+     &__percent{
+         width: 0;
+         height: 100%;
+        background-color: $mainCol;
+        text-align: center;
+     }
+    }
+    &__imgAdd{
+     width: 250px;
+     margin: 15px;
+
+    }
+    &__deleteImg{
+     width: 200px;
+     height: 50px;
+     @extend %btnBlue; 
+     background-color: $redCol;
+     border-color: $redCol;
+
+    }
+}

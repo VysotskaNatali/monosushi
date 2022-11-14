@@ -1,0 +1,8 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+.header {
+  width: 220px;
+  @extend %logoHeader;
+  margin-bottom: 380px;
+}

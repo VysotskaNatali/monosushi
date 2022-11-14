@@ -1,0 +1,76 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+.footers {
+  width: 100%;
+  margin-top: 150px;
+  height: 138px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 5px solid $mainCol;
+
+}
+.logo {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  &__text {
+    width: 122px;
+    font-size: 12px;
+    color: $lightText;
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 290px;
+  padding: 20px 0;
+  margin: 0 10%;
+  &__li {
+    display: inline-block;
+    margin: 10px 10px;
+  }
+  &__li a {
+    text-decoration: none;
+    color: $darkText;
+    font-weight: 100;
+    &:hover {
+      color: $mainCol;
+    }
+  }
+  &__img {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.footer {
+  width: 280px;
+  margin: 20px 0 10px 0;
+  text-align: center;
+  font-size: 14px;
+  &__bold {
+    font-weight: bold;
+    color: $darkText;
+    margin-bottom:5px ;
+  }
+  &__light {
+    font-weight: 100;
+    color: $lightText;
+  }
+  &__social{
+    margin-top: 25px;
+
+  }
+  .uil {
+    background-color: $mainCol;
+    margin: 0 3px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+.info {
+  margin: 150px auto;
+  width: 60%;
+  &__title {
+    width: 100%;
+    height: 200px;
+    background-color: $mainCol;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: $darkText;
+    h1 {
+      width: 60%;
+      border-top: 5px solid $darkText;
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+  p {
+    margin: 15px ;
+    width: 60%;
+    line-height: 40px;
+    color: $lightText;
+  }
+}

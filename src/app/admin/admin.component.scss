@@ -1,0 +1,32 @@
+@import "../shared/styles/variables";
+@import "../shared/styles/base";
+
+.admin{
+    display: flex;
+    justify-content: space-between;
+    margin:150px 25px;
+&__side{
+    width: 200px;
+    &__btn{
+        width: 150px;
+        height: 50px; 
+      @extend %btnBlue;
+    }
+}
+&__main{
+    width: 80%;
+}
+}
+li {
+    list-style-type: none;
+    color: $lightText;
+    font-size: 25px;
+    border: 1px solid $lighterBorder;
+    text-align: center;
+    padding:35px 10px;
+}
+.route-active{
+    border-bottom: 5px solid $mainCol;
+    color: $darkText;
+    font-weight: bolder;
+}

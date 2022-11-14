@@ -1,0 +1,61 @@
+<div class="header">
+    <div class="logo" [routerLink]="[ '/' ]">
+        <img src="../../../assets/logo.svg" alt="">
+    </div>
+    <div class="product">
+        <div class="product__category" [routerLink]="[ '/action' ]"
+            routerLinkActive="route-active">
+            <img src="../../../assets/nav-img-gift.svg" alt="">
+            <p>Акції</p>
+        </div>
+        <div class="product__category" [routerLink]="[ '/product/roli' ]"
+            routerLinkActive="route-active">
+            <img src="../../../assets/nav-img-rolls.svg" alt="">
+            <p>Роли</p>
+        </div>
+        <div class="product__category" [routerLink]="[ '/product/setu' ]"
+            routerLinkActive="route-active">
+            <img src="../../../assets/nav-img-sets.svg" alt="">
+            <p>Сети</p>
+        </div>
+        <div class="product__category" [routerLink]="[ '/product/drinks' ]"
+            routerLinkActive="route-active">
+            <img src="../../../assets/nav-img-drinks.svg" alt="">
+            <p>Напої</p>
+        </div>
+        <div class="product__category" [routerLink]="[ '/product/sousi' ]"
+            routerLinkActive="route-active">
+            <img src="../../../assets/icon.svg" alt="">
+            <p>Соуси</p>
+        </div>
+    </div>
+    <div class="menu" (click)="menuPop()">&#9776;
+        <div class="header-menu" *ngIf="menu">
+            <div  class="header-menu__close" >
+                <i class="uil uil-multiply"></i></div>
+            <ul>
+                <li class="header-menu__li"><a [routerLink]="[ '/delivery' ]">Доставка
+                        та оплата</a></li>
+                <li class="header-menu__li"><a [routerLink]="[ '/about' ]">Про
+                        нас</a></li>
+                <li class="header-menu__li"><a [routerLink]="[ '/action' ]">Акції</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="open-popup"><img width="20px" src="../../../assets/phone.svg"
+            alt=""> МИ ЗАТЕЛЕФОНУЕМО</button>
+    <div class="header-phone">
+        <p class="header-phone__num">(097) 878 08 07</p>
+        <p><span class="header-phone__text">Працюємо з </span><span> 11:00
+            </span><span class="header-phone__text"> до </span><span> 21:30</span></p>
+    </div>
+    <div class="header-user" [routerLink]="[ '/admin' ]"
+        routerLinkActive="route-active">
+        <img src="../../../assets/user.svg" alt="">
+    </div>
+    <div class="checkout">
+        <img src="../../../assets/basket.svg" height="50px" alt="">
+        <span class="checkout__count">0</span><span class="checkout__name"> грн</span>
+    </div>
+</div>
