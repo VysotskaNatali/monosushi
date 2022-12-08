@@ -1,53 +1,51 @@
-<button class="category__btn" (click)="addCategory()"> Додати категорію</button>
+<button class="category__btn" (click)="toggleOpenForm()"> Додати категорію</button>
+<table class="table" *ngIf="showForm">
+    <thead>
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Назва</th>
+            <th scope="col">Шлях</th>
+            <th scope="col">Картинка</th>
+            <th scope="col">Дії</th>
+        </tr>
+    </thead>
+    <tbody>
 
-    <table class="table" *ngIf="showForm">
-        <thead>
-            <tr>
-                <th scope="col">№</th>
-                <th scope="col">Назва</th>
-                <th scope="col">Шлях</th>
-                <th scope="col">Картинка</th>
-                <th scope="col">Дії</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            <tr *ngFor="let category of adminCategories">
-                <td>№{{category.id}}</td>
-                <td>{{category.name}}</td>
-                <td>{{category.path}}</td>
-                <td><img class="img" [src]="category.imagePath" width="70px" alt=""></td>
-                <td>
-                    <button (click)="editCategory(category)"
-                     class="table__btn">Редагувати</button>
-                    <button (click)="deleteCategory(category)"
-                     class="table__btn">Видалити</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+        <tr *ngFor="let category of adminCategories">
+            <td>№{{category.id}}</td>
+            <td>{{category.name}}</td>
+            <td>{{category.path}}</td>
+            <td><img class="img" [src]="category.imagePath" width="30px" alt=""></td>
+            <td>
+                <button (click)="editCategory(category)"
+                    class="table__btn">Редагувати</button>
+                <button (click)="deleteCategory(category)"
+                    class="table__btn">Видалити</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 
-    <form class="form" [formGroup]="categoryForm" (ngSubmit)="saveCategory()" *ngIf="!showForm">
-       
-        <input formControlName="name"
-                class="form__input" type="text" placeholder="*Назва">
+<form class="form" [formGroup]="categoryForm" (ngSubmit)="saveCategory()"
+    *ngIf="!showForm">
 
-        <input formControlName="path"
-               class="form__input" type="text" placeholder="*Шлях">
+    <input formControlName="name"
+        class="form__input" type="text" placeholder="*Назва">
 
-               <ng-container *ngIf="!isUploaded">
-                <input class="form__file" type="file" placeholder="" (change)="upload($event)"> 
-                <div class="form__upload ">
-                   <p class="form__upload__percent " [style.width.%]="uploadPercent"  >{{ uploadPercent }}%</p>
-                  </div>
-               </ng-container>
-       
-               <ng-container *ngIf="isUploaded">
-                <img class="form__imgAdd" [src]="valueByControl('imagePath')"  alt="">
-                <button type="button" class="form__deleteImg" (click)="deleteImage()">ВИДАЛИТИ</button>
-            </ng-container>
+    <input formControlName="path"
+        class="form__input" type="text" placeholder="*Шлях">
 
-        <button  type="submit"  [disabled]="categoryForm.invalid"
+    <ng-container *ngIf="!isUploaded">
+        <input class="form__file" type="file" placeholder=""
+            (change)="upload($event)">
+    </ng-container>
+
+    <ng-container *ngIf="isUploaded">
+        <img class="form__imgAdd" [src]="valueByControl('imagePath')" alt="">
+        <button type="button" class="form__deleteImg" (click)="deleteImage()">ВИДАЛИТИ</button>
+    </ng-container>
+
+    <button type="submit" [disabled]="categoryForm.invalid"
         class="form__btn"> {{ editStatus ? 'ЗБЕРЕГТИ' : 'ДОДАТИ' }} </button>
-    </form> 
+</form>

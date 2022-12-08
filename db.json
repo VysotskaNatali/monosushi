@@ -17,14 +17,6 @@
       "data": "2022-11-14T18:26:24.876Z"
     },
     {
-      "name": "Самовивіз",
-      "title": "Самовивіз",
-      "description": "Забирайте своє замовлення самостійно та отримуйте такі переваги: <br><br>\n\n- Запечені моно макі з лососем у подарунок.<br>\n- Відсутність мінімальної суми замовлення.<br><br>\nЧас очікування на замовлення до 30 хв.<br>\n- Для отримання акційного ролу у подарунок зберігається умова мінімальної суми замовлення 300 грн.<br>\n- Ця акція не поєднується з іншими акціями.",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/discounts%2Fdelivery.png?alt=media&token=bbb8f9eb-ae37-40d7-bb8d-a73092137930",
-      "data": "2022-11-14T18:28:10.063Z",
-      "id": 3
-    },
-    {
       "name": "День народження з Моносуші",
       "title": "День народження з Моносуші",
       "description": "При оформленні замовлення вкажіть промокод “День народження” та отримайте “Запечений сет” безкоштовно до Вашого замовлення. <br>\nТермін дії акції – День народження плюс один день до та після свята. <br>\nЦя акція починає діяти при мінімальній сумі замовлення 750 грн. <br>\nДля отримання подарунку іменинник має показати кур’єру оригінал документу, що підтверджує його дату народження. <br>\nЦя акція не поєднується з іншими акціями.",
@@ -35,15 +27,15 @@
   ],
   "categories": [
     {
-      "name": "сети",
-      "path": "sets",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fnav-img-sets.svg?alt=media&token=961a5b8b-bb2d-4035-9d37-1344b9d3f210",
+      "name": "pоли",
+      "path": "roli",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fnav-img-rolls.svg?alt=media&token=995a7272-6f7b-4bc9-aa50-ed104bcfa9de",
       "id": 1
     },
     {
-      "name": "роли",
-      "path": "rolls",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fnav-img-rolls.svg?alt=media&token=f60cb596-4ec2-48e7-9180-3fe477411501",
+      "name": "сети",
+      "path": "sets",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fnav-img-sets.svg?alt=media&token=961a5b8b-bb2d-4035-9d37-1344b9d3f210",
       "id": 2
     },
     {
@@ -53,10 +45,69 @@
       "id": 3
     },
     {
-      "name": "jjjjj",
-      "path": "mmmmm",
-      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Fbasket.svg?alt=media&token=caf28743-ebf8-49b5-8df3-a3d1cb907d1c",
+      "name": "cоуси",
+      "path": "sousi",
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/categories%2Ficon.svg?alt=media&token=bc58fc52-2bca-403b-9a2a-00c8624e29b0",
       "id": 4
+    }
+  ],
+  "products": [
+    {
+      "category": "roli",
+      "name": "Філадельфія з лососем",
+      "path": "roli",
+      "description": "Риc, крем сир, огірок, лосось",
+      "weight": 280,
+      "price": 232,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/products%2F1.-filadelfiya-z-lososem.jpg.pagespeed.ce.axvTz8qDqj.jpg?alt=media&token=b6567caf-4ee8-4990-b689-f9bfaf724e99",
+      "count": 1,
+      "id": 1
+    },
+    {
+      "category": "roli",
+      "name": "Макі з тунцем – 50%",
+      "path": "roli",
+      "description": "Рис, норі, тунець",
+      "weight": 120,
+      "price": 76,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/products%2F5.-maki-z-tunczem.jpg.pagespeed.ce.a76pRjJKFp.jpg?alt=media&token=5262daa3-bd60-49ed-bf2a-a1675eb3d9fa",
+      "count": 1,
+      "id": 2
+    },
+    {
+      "category": "roli",
+      "name": "Філадельфія в кунжуті",
+      "path": "roli",
+      "description": " Рис, крем сир, огірок, лосось, кунжу",
+      "weight": 240,
+      "price": 208,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/products%2F2.-filadelfiya-v-kunzhuti.jpg.pagespeed.ce.OnHk5blNMI.jpg?alt=media&token=9f18f07e-c7ed-4ac7-8356-779720c6bae2",
+      "count": 1,
+      "id": 3
+    },
+    {
+      "category": "roli",
+      "name": "Філадельфія з тунцем",
+      "path": "roli",
+      "description": "Риc, крем сир, авокадо, тунець, cоус солодкий чилі",
+      "weight": 269,
+      "price": 270,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/products%2Fphoto_2022-07-09_13-28-56.jpg.pagespeed.ce.xde1HkPhrW.jpg?alt=media&token=b03a8ed3-a8a8-4ee2-8cf9-eaf47961afab",
+      "count": 1,
+      "id": 4
+    },
+    {
+      "category": "sets",
+      "name": "Сет Філадельфія",
+      "path": "setu",
+      "description": "Філадельфія: з лососем / в кунжуті / з тунцем / з вугрем",
+      "weight": 1070,
+      "price": 950,
+      "imagePath": "https://firebasestorage.googleapis.com/v0/b/monosushi-a39e1.appspot.com/o/products%2Fimgonline-com-ua-compressed-jknw6idh54664-scaled.jpg.pagespeed.ce.4A9elt-ybs.jpg?alt=media&token=d1be4e57-6399-458c-935d-b5d613fbcba8",
+      "count": [
+        1
+      ],
+      "id": 5
     }
   ]
 }

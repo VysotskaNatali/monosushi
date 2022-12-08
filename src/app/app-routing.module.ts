@@ -23,6 +23,7 @@ const routes: Routes = [
   { path: 'action', component: DiscountComponent  },
   { path: 'action/:id', component: DiscountInfoComponent },
   { path: 'product/:category', component: ProductComponent},
+  { path: 'product/:category/:id', component: ProductInfoComponent},
   { path: 'delivery', component: DeliveryComponent},
   { path: 'about', component: AboutComponent },
   { path: 'offerta', component: OffertaComponent },

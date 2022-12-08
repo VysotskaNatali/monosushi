@@ -1,1 +1,23 @@
-<p>product-info works!</p>
+
+<div class="product">
+    <img class="product__img "[src]="product.imagePath" alt="">
+
+    <div class="product__item">
+        <h2 class="product__item__name">{{product.name}}</h2>
+        <p class="product__item__p">Склад: </p><p class="product__item__p1">{{product.description}}</p>
+        <p class="product__item__p">Вага: </p><p class="product__item__p1">{{product.weight}}
+            г</p>
+
+        <div class="product__item__count">
+            <p class="product__item__count__price">{{product.price *
+                product.count}} <span>грн</span></p>
+
+           
+                <button class="product__item__count__plus">+</button>
+                <span class="product__item__count__num">{{product.count}}</span>
+                <button class="product__item__count__min">-</button>
+                <button class="product__item__count__btn">Замовити</button>
+            
+        </div>
+    </div>
+</div>

@@ -4,5 +4,139 @@
 .header {
   width: 220px;
   @extend %logoHeader;
-  margin-bottom: 380px;
+  margin-bottom: 130px;
+}
+.productList {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  &__item a {
+    text-decoration: none;
+    color: $darkText;
+  }
+  &__item {
+    width: calc(100% / 6.8);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid $lightBorder;
+    &:hover {
+      border: 2px solid transparent;
+      border-top: 4px solid $mainCol;
+    }
+  }
+}
+.userProduct {
+  width: 90%;
+  margin: 50px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__block {
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $white;
+    border-radius: 10px;
+    &:hover {
+      @extend %border;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__text {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      &__name {
+        width: 100%;
+        font-size: 18px;
+        color: $darkText;
+        text-align: center;
+        font-weight: bolder;
+        &:hover {
+          color: $mainCol;
+        }
+      }
+      &__description {
+        width: 80%;
+        color: $lightText;
+        margin: 20px 0;
+      }
+      &__weight {
+        font-size: 16px;
+        font-weight: bolder;
+        color: $darkText;
+        margin: 20px 0;
+      }
+    }
+
+    &__price {
+      width: 100%;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      &__text {
+        margin-top: 10px;
+        font-size: 18px;
+        color: $darkText;
+        font-weight: bolder;
+      }
+      &__count {
+        display: flex;
+
+        &__plus {
+          width: 25px;
+          height: 40px;
+          outline: none;
+          border-radius: 5px 0 0 5px;
+          border: 1px solid $lighterBorder;
+          font-size: 18px;
+          font-weight: bolder;
+          background-color: $white;
+          &:hover {
+            background-color: $mainCol;
+          }
+        }
+        &__min {
+          @extend .userProduct__block__price__count__plus;
+          border-radius: 0 5px 5px 0;
+          margin-right: 10px;
+          font-size: 22px;
+        }
+        &__num {
+          width: 25px;
+          height: 40px;
+          border: 1px solid $lighterBorder;
+          font-size: 18px;
+          font-weight: bolder;
+          display: block;
+          text-align: center;
+          line-height: 40px;
+        }
+        &__btn {
+          width: 100px;
+          height: 40px;
+          outline: none;
+          border-radius: 5px;
+          border: 1px solid $mainCol;
+          font-size: 18px;
+          font-weight: bolder;
+          background-color: $mainCol;
+        }
+      }
+    }
+  }
+}
+route-active {
+  border: 2px solid transparent;
+  border-top: 4px solid $mainCol;
 }

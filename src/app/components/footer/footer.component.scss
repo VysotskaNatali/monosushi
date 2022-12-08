@@ -8,7 +8,6 @@
   display: flex;
   justify-content: space-around;
   border-top: 5px solid $mainCol;
-
 }
 .logo {
   width: 140px;
@@ -56,15 +55,14 @@
   &__bold {
     font-weight: bold;
     color: $darkText;
-    margin-bottom:5px ;
+    margin-bottom: 5px;
   }
   &__light {
     font-weight: 100;
     color: $lightText;
   }
-  &__social{
+  &__social {
     margin-top: 25px;
-
   }
   .uil {
     background-color: $mainCol;

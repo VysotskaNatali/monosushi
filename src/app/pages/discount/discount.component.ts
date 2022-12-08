@@ -13,9 +13,9 @@ export class DiscountComponent implements OnInit {
   constructor(private discountService: DiscountService) {}
 
   ngOnInit(): void {
-    this.getDiscount();
+    this.loadDiscount();
   }
-  getDiscount(): void {
+  loadDiscount(): void {
     this.discountService.getAll().subscribe((data) => {
       this.userDiscounts = data;
     });

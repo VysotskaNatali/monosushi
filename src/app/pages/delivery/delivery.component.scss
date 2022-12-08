@@ -3,7 +3,7 @@
 
 .name {
   width: 400px;
-   @extend %logoHeader;
+  @extend %logoHeader;
 }
 .delivery {
   width: 1100px;
@@ -20,38 +20,37 @@
     text-align: center;
     line-height: 30px;
   }
-  &__map{
+  &__map {
     margin: 25px auto;
     width: 70%;
   }
 }
-.green{
-    color: $greenText;
-    font-weight: bold;
-   
+.green {
+  color: $greenText;
+  font-weight: bold;
 }
-.yellow{
-    color: $yellowText;
-    font-weight: bold;
+.yellow {
+  color: $yellowText;
+  font-weight: bold;
 }
-h1{
-    font-size: 26px;
+h1 {
+  font-size: 26px;
 }
-.description{
-    width: 70%;
-    margin: 50px auto;
-    color:$lightText;
-    letter-spacing: 1px;
-    font-size: 15px;
-    line-height: 20px;
+.description {
+  width: 70%;
+  margin: 50px auto;
+  color: $lightText;
+  letter-spacing: 1px;
+  font-size: 15px;
+  line-height: 20px;
 }
-.payments{
+.payments {
   width: 800px;
   margin: 20px auto;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  &__header{
+  &__header {
     width: 100%;
     text-align: center;
     font-size: 30px;
@@ -60,33 +59,31 @@ h1{
     padding: 20px;
   }
 }
-.payment{
+.payment {
   width: 45%;
   display: flex;
   margin: 0 20px;
-  img{
+  img {
     width: 70px;
     height: 70px;
     background-color: $mainCol;
     padding: 15px 10px;
     border-radius: 7px;
     margin: 5px;
-    
   }
-  &__top{
+  &__top {
     font-size: 16px;
     font-weight: bold;
     color: $darkText;
-    padding: 20px 10px ;
+    padding: 20px 10px;
   }
-  &__desc{
+  &__desc {
     font-size: 15px;
     font-weight: 100;
     color: $lightText;
     padding: 0 10px;
   }
- 
 }
-.bord{
+.bord {
   border-right: 2px solid $mainCol;
 }

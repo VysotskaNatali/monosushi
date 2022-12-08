@@ -1,0 +1,88 @@
+@import "../../shared/styles/variables";
+@import "../../shared/styles/base";
+
+.product{
+    margin: 200px auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    &__img{
+        width: 400px;
+        height: 150px;
+    }
+    &__item{
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+        &__name{
+            width: 100%;
+            font-size: 32px;
+            font-weight: bolder;
+            color: $darkText;
+            margin: 15px 0;
+        }
+        &__p{
+            color:$mainCol;
+            font-size: 20px;
+            font-weight: bolder;
+            margin: 10px 0;
+        }
+        &__p1{
+            width: 70%;
+            color: $lightText;
+            font-size: 20px;
+            margin: 10px;
+        }
+        &__count{
+            display: flex;
+            margin: 25px 0;
+            &__price{
+                font-size: 22px;
+                font-weight: bolder;
+                color: $darkText;
+               margin: 10px 65px 0 0;
+            }
+            &__plus{
+                width: 25px;
+                height: 40px;
+                outline: none;
+                border-radius: 5px 0 0 5px ;
+                border: 1px solid $lighterBorder;
+                font-size: 18px;
+                font-weight: bolder;
+                background-color: $white;
+                &:hover{
+                    background-color: $mainCol;
+                }
+              }
+              &__min{
+                @extend .product__item__count__plus;
+                border-radius: 0 5px 5px 0;
+                margin-right: 10px;
+                font-size: 22px;
+              }
+              &__num{
+                width: 25px;
+                height: 40px;
+                border-radius: 5px 0 0 5px ;
+                border: 1px solid $lighterBorder;
+                font-size: 18px;
+                font-weight: bolder;
+                display: block;
+                text-align: center;
+                line-height: 40px;
+              }
+              &__btn{
+                width: 130px;
+                height: 40px;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid $mainCol;
+                font-size: 18px;
+                font-weight: bolder;
+                background-color: $mainCol;
+      
+              }
+        }
+    }
+}
