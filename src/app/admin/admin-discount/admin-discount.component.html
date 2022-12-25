@@ -20,7 +20,7 @@
                     *ngIf="discount.description.length> 33">...</span></td>
 
             <td><img class="img" [src]="discount.imagePath" width="150px"
-                    alt=""></td>
+                    [alt]="discount.name"></td>
             <td>
                 <button (click)="editDiscount(discount)"
                     class="table__btn">Редагувати</button>

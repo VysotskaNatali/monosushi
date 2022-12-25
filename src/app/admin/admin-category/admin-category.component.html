@@ -10,12 +10,12 @@
         </tr>
     </thead>
     <tbody>
-
         <tr *ngFor="let category of adminCategories">
             <td>№{{category.id}}</td>
             <td>{{category.name}}</td>
             <td>{{category.path}}</td>
-            <td><img class="img" [src]="category.imagePath" width="30px" alt=""></td>
+            <td><img class="img" [src]="category.imagePath" width="30px"
+                    [alt]="category.name"></td>
             <td>
                 <button (click)="editCategory(category)"
                     class="table__btn">Редагувати</button>
@@ -42,7 +42,8 @@
     </ng-container>
 
     <ng-container *ngIf="isUploaded">
-        <img class="form__imgAdd" [src]="valueByControl('imagePath')" alt="">
+        <img class="form__imgAdd" [src]="valueByControl('imagePath')"
+            alt="image">
         <button type="button" class="form__deleteImg" (click)="deleteImage()">ВИДАЛИТИ</button>
     </ng-container>
 

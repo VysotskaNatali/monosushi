@@ -1,10 +1,11 @@
 $body: rgb(242, 246, 250);
 $white: rgb(255, 255, 255);
-$mainCol: #b5d8f7;
+$mainCol: #a7cff3;
 $lightText: #707070;
 $lightBorder: #bdbbbb;
 $lighterBorder: #d6d1d1a9;
 $darkText: #252525;
+$darkShadow: #0303036b;
 $greenText: #27ae60;
 $yellowText: #f2c94c;
 $redCol: #eb2020;
@@ -13,7 +14,9 @@ $redCol: #eb2020;
 %border {
   border: 2px solid transparent;
   border-radius: 5px;
+  
   &:hover {
+    cursor: pointer;
     animation: drawborder 500ms linear forwards;
   }
 }
@@ -52,6 +55,7 @@ $redCol: #eb2020;
 }
 
 %btn__admin {
+  cursor: pointer;
   width: 250px;
   height: 50px;
   border: 3px solid $mainCol;
@@ -80,6 +84,7 @@ $redCol: #eb2020;
 }
 
 %btnBlue {
+  cursor: pointer;
   border-radius: 5px;
   margin: 25px;
   border: 4px solid $mainCol;
@@ -92,4 +97,34 @@ $redCol: #eb2020;
     font-size: 20px;
     color: $lightText;
   }
+}
+
+%btn__plus{
+  width: 25px;
+  height: 40px;
+  outline: none;
+  border-radius: 5px 0 0 5px ;
+  border: 1px solid $lighterBorder;
+  font-size: 18px;
+  font-weight: bolder;
+  background-color: $white;
+  &:hover{
+      background-color: $mainCol;
+  }
+}
+%btn__min{
+  @extend %btn__plus;
+  border-radius: 0 5px 5px 0;
+  margin-right: 10px;
+  font-size: 22px;
+}
+%btn__num{
+  width: 25px;
+  height: 40px;
+  border: 1px solid $lighterBorder;
+  font-size: 18px;
+  font-weight: bolder;
+  display: block;
+  text-align: center;
+  line-height: 40px;
 }

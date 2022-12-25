@@ -11,6 +11,7 @@
   top: 0;
   left: 0;
   background-color: $body;
+  z-index: 5;
 }
 .logo {
   width: 217px;
@@ -58,7 +59,6 @@
   left: -25px;
   background-color: rgb(242, 246, 250);
   padding: 20px;
-
   &__close {
     width: 35px;
     height: 35px;
@@ -93,7 +93,6 @@
   border-radius: 5px;
   background-color: $mainCol;
   border: 3px solid $mainCol;
-
   &:hover {
     background-color: transparent;
   }
@@ -127,6 +126,7 @@
   align-items: center;
   background-color: $mainCol;
   padding: 20px 10px;
+  position: relative;
   &__count {
     font-weight: bolder;
     margin: 0 5px;
@@ -136,5 +136,112 @@
   &__name {
     font-weight: lighter;
     font-size: 18px;
+  }
+  &__lenght {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: $white;
+    top: 25px;
+    left: 42px;
+    text-align: center;
+    line-height: 25px;
+    color: $lightText;
+  }
+}
+.shadow {
+  width: 100%;
+  position: fixed;
+  top: 110px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $darkShadow;
+}
+.basket {
+  width: 700px;
+  min-height: 200px;
+  background-color: $white;
+  border-radius: 0 0 0 15px;
+  position: fixed;
+  top: 110px;
+  right: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  &__product {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+    tr {
+      width: 100%;
+      font-size: 20px;
+      color: $darkText;
+    }
+    td {
+      padding: 15px;
+      height: 100px;
+    }
+    &__count {
+      display: flex;
+      &__plus {
+        @extend %btn__plus;
+      }
+      &__num {
+        @extend %btn__num;
+      }
+      &__min {
+        @extend %btn__min;
+      }
+    }
+    &__img {
+      padding: 0;
+    }
+  }
+  &__zero {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &__text {
+      text-align: center;
+      font-size: 25px;
+      font-weight: bolder;
+      color: $darkText;
+    }
+    &__btn {
+      @extend %btn__admin;
+    }
+  }
+  &__order {
+    width: 100%;
+    height: 120px;
+    padding: 35px;
+    background-color: $mainCol;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    &__sum {
+      color: $lightText;
+      font-size: 19px;
+      span {
+        color: $darkText;
+        font-size: 22px;
+        font-weight: bolder;
+      }
+    }
+    &__btn {
+      @extend %btn__admin;
+      border-radius: 10px;
+      &:hover {
+        border: 3px solid $white;
+      }
+    }
   }
 }

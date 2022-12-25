@@ -1,22 +1,27 @@
 
 <div class="product">
-    <img class="product__img "[src]="product.imagePath" alt="">
+    <img [routerLink]="['/product/'+currentProduct.category.path]"
+    class="product__img "[src]="currentProduct.imagePath" [alt]="currentProduct.name">
 
     <div class="product__item">
-        <h2 class="product__item__name">{{product.name}}</h2>
-        <p class="product__item__p">Склад: </p><p class="product__item__p1">{{product.description}}</p>
-        <p class="product__item__p">Вага: </p><p class="product__item__p1">{{product.weight}}
+        <h2 [routerLink]="['/product/'+currentProduct.category.path]"
+        class="product__item__name">{{currentProduct.name}}</h2>
+        <p class="product__item__p">Склад: </p><p class="product__item__p1">{{currentProduct.description}}</p>
+        <p class="product__item__p">Вага: </p><p class="product__item__p1">{{currentProduct.weight}}
             г</p>
 
         <div class="product__item__count">
-            <p class="product__item__count__price">{{product.price *
-                product.count}} <span>грн</span></p>
+            <p class="product__item__count__price">{{currentProduct.price *
+                currentProduct.count}} <span>грн</span></p>
 
            
-                <button class="product__item__count__plus">+</button>
-                <span class="product__item__count__num">{{product.count}}</span>
-                <button class="product__item__count__min">-</button>
-                <button class="product__item__count__btn">Замовити</button>
+                <button (click)="productCount(currentProduct, false)" 
+                class="product__item__count__plus">-</button>
+                <span class="product__item__count__num">{{currentProduct.count}}</span>
+                <button (click)="productCount(currentProduct, true)"
+                 class="product__item__count__min">+</button>
+                <button (click)="addToBasket(currentProduct)"
+                class="product__item__count__btn">Замовити</button>
             
         </div>
     </div>

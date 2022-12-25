@@ -41,8 +41,60 @@
         routerLinkActive="route-active">
         <img src="../../../assets/user.svg" alt="">
     </div>
-    <div class="checkout">
+    <div (click)="basketToggle()" class="checkout">
         <img src="../../../assets/basket.svg" height="50px" alt="">
-        <span class="checkout__count">0</span><span class="checkout__name"> грн</span>
+        <span class="checkout__count">{{total}}</span><span
+            class="checkout__name"> грн</span>
+        <div class="checkout__lenght">{{countBasket}}</div>
+
     </div>
+
+</div>
+<div class="shadow" *ngIf="openBasket"></div>
+<div class="basket" *ngIf="openBasket">
+    <div class="basket__product"
+        *ngIf="basketArray.length> 0">
+        <table>
+            <tbody>
+                <tr *ngFor="let product of basketArray">
+                    <td class="basket__product__img">
+                        <img [routerLink]="[ '/product/'+ product.category.path,
+                            product.id ]"
+                            (click)="basketToggle()"
+                            [src]="product.imagePath" height="60px"
+                            alt="product.name"></td>
+                    <td [routerLink]="[ '/product/'+ product.category.path,
+                        product.id ]"
+                        (click)="basketToggle()">{{product.name}}</td>
+                    <td>
+                        <div class="basket__product__count">
+                            <button (click)="productCount(product, true)"
+                                class="basket__product__count__plus">+</button>
+                            <span class="basket__product__count__num">{{product.count}}</span>
+                            <button (click)="productCount(product, false)"
+                                class="basket__product__count__min">-</button>
+                        </div>
+
+                    </td>
+                    <td>{{product.count*product.price}} грн</td>
+                    <td>🗑️ </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="basketArray.length <= 0" class="basket__zero">
+        <img src="../../../assets/basketZero.svg" alt="ZERO">
+        <h1 class="basket__zero__text">кошик порожній</h1>
+        <button class="basket__zero__btn" [routerLink]="[ '/product/roli' ]"
+            (click)="basketToggle()">Перейти до каталогу</button>
+    </div>
+    <div class="basket__order">
+        <div class="basket__order__sum">
+            <p>Cума: <span>{{total}}</span> грн</p>
+        </div>
+        <button (click)="order()" [disabled]="basketArray.length <= 0"
+            type="button" class="basket__order__btn">Замовити</button>
+    </div>
+
 </div>

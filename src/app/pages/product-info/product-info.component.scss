@@ -7,8 +7,8 @@
     display: flex;
     justify-content: space-around;
     &__img{
-        width: 400px;
-        height: 150px;
+        height: 200px;
+        cursor: pointer;
     }
     &__item{
         width: 400px;
@@ -43,34 +43,14 @@
                margin: 10px 65px 0 0;
             }
             &__plus{
-                width: 25px;
-                height: 40px;
-                outline: none;
-                border-radius: 5px 0 0 5px ;
-                border: 1px solid $lighterBorder;
-                font-size: 18px;
-                font-weight: bolder;
-                background-color: $white;
-                &:hover{
-                    background-color: $mainCol;
-                }
+              @extend %btn__plus;
               }
               &__min{
-                @extend .product__item__count__plus;
-                border-radius: 0 5px 5px 0;
-                margin-right: 10px;
-                font-size: 22px;
+                @extend %btn__min;
               }
               &__num{
-                width: 25px;
-                height: 40px;
-                border-radius: 5px 0 0 5px ;
-                border: 1px solid $lighterBorder;
-                font-size: 18px;
-                font-weight: bolder;
-                display: block;
-                text-align: center;
-                line-height: 40px;
+               
+                @extend %btn__num;
               }
               &__btn{
                 width: 130px;
@@ -81,6 +61,7 @@
                 font-size: 18px;
                 font-weight: bolder;
                 background-color: $mainCol;
+               
       
               }
         }

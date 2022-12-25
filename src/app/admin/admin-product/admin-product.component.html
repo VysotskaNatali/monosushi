@@ -13,7 +13,6 @@
         </tr>
     </thead>
     <tbody>
-
         <tr *ngFor="let product of adminProducts">
             <td>{{product.id}}</td>
             <td>{{product.path}}</td>
@@ -24,7 +23,7 @@
             <td>{{product.price}} грн</td>
 
             <td><img class="img" [src]="product.imagePath" width="100px"
-                    alt=""></td>
+                    [alt]="product.name"></td>
             <td>
                 <button (click)="editProduct(product)"
                     class="table__btn">Редагувати</button>
@@ -35,12 +34,11 @@
     </tbody>
 </table>
 
-
 <form class="form" [formGroup]="productForm" (ngSubmit)="saveProduct()"
     *ngIf="!showForm">
     <label for="category" class="form__label"></label>
     <select formControlName="category" class="form__select" id="category">
-        <option [ngValue]="category.path" *ngFor="let category of
+        <option [ngValue]="category" *ngFor="let category of
             adminCategories" selected>{{category.name}}
         </option>
     </select>
@@ -59,11 +57,11 @@
     <ng-container *ngIf="!isUploaded">
         <input class="form__file" type="file" placeholder=""
             (change)="upload($event)">
-
     </ng-container>
 
     <ng-container *ngIf="isUploaded">
-        <img class="form__imgAdd" [src]="valueByControl('imagePath')" alt="">
+        <img class="form__imgAdd" [src]="valueByControl('imagePath')"
+            alt="image">
         <button type="button" class="form__deleteImg" (click)="deleteImage()">ВИДАЛИТИ</button>
     </ng-container>
     <button type="submit" [disabled]="productForm.invalid"

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -59,12 +60,13 @@ import { AdminDiscountComponent } from './admin/admin-discount/admin-discount.co
   ],
   imports: [
     BrowserModule,
-    CommonModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule,
     ReactiveFormsModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,7 +10,7 @@ import {
 @Injectable({
   providedIn: 'root',
 })
-export class ProductService {
+export class ProductService  {
   private url = environment.BACKEND_URL;
   private api = { products: `${this.url}/products` };
 
@@ -44,4 +44,5 @@ export class ProductService {
   delete(id: number): Observable<void> {
     return this.http.delete<void>(`${this.api.products}/${id}`);
   }
+
 }

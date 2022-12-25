@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+  
   hideText(): void {
     this.hide = !this.hide;
     console.log();

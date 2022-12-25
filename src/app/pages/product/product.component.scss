@@ -37,7 +37,7 @@
 
   &__block {
     width: 300px;
-    height: 400px;
+    height: 450px;
     margin: 20px;
     padding: 10px;
     display: flex;
@@ -94,33 +94,13 @@
         display: flex;
 
         &__plus {
-          width: 25px;
-          height: 40px;
-          outline: none;
-          border-radius: 5px 0 0 5px;
-          border: 1px solid $lighterBorder;
-          font-size: 18px;
-          font-weight: bolder;
-          background-color: $white;
-          &:hover {
-            background-color: $mainCol;
-          }
+          @extend %btn__plus;
         }
         &__min {
-          @extend .userProduct__block__price__count__plus;
-          border-radius: 0 5px 5px 0;
-          margin-right: 10px;
-          font-size: 22px;
+          @extend %btn__min;
         }
         &__num {
-          width: 25px;
-          height: 40px;
-          border: 1px solid $lighterBorder;
-          font-size: 18px;
-          font-weight: bolder;
-          display: block;
-          text-align: center;
-          line-height: 40px;
+          @extend %btn__num;
         }
         &__btn {
           width: 100px;
