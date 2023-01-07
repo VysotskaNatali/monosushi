@@ -17,7 +17,8 @@
     </ul>
 </div>
 <div class="aboutContainer">
-    <img src="../../../assets/img_1127-scaled-568x568.jpg" width="568px" alt="about">
+    <img src="../../../assets/img_1127-scaled-568x568.jpg" width="568px"
+        alt="about">
     <div class="aboutContainer__block">
         <h3>Привіт! Познайомимось?</h3>
         <p>Monosushi – це доставка найсмачніших суші у Львові, яка була створена
@@ -68,8 +69,7 @@
 <h2 class="headerName border">Популярні запитання</h2>
 
 <div class="question" *ngFor="let item of question;index as i">
-    <h2>{{item.h2}}</h2> <span (click)="ask(i)">{{item.ask? ' &#709;':'
-        &#708;'}}</span>
+    <h2>{{item.h2}}</h2> <span (click)="ask(i)">{{item.ask? '⯅':' ⯆'}}</span>
     <div *ngIf="item.ask">
         <p>{{item.p1}}</p>
         <p>{{item.p2}}</p>

@@ -37,10 +37,17 @@
         <p><span class="header-phone__text">Працюємо з </span><span> 11:00
             </span><span class="header-phone__text"> до </span><span> 21:30</span></p>
     </div>
-    <div class="header-user" [routerLink]="[ '/admin' ]"
+
+    <div class="header-login" [routerLink]="[ '/auth' ]" *ngIf="!isLogin"
         routerLinkActive="route-active">
         <img src="../../../assets/user.svg" alt="">
+        <p></p>
     </div>
+
+    <div class="header-user" [routerLink]="[ '/'+loginUrl ]" *ngIf="isLogin"
+        routerLinkActive="route-active"><p>{{ loginPage}}</p>
+    </div>
+
     <div (click)="basketToggle()" class="checkout">
         <img src="../../../assets/basket.svg" height="50px" alt="">
         <span class="checkout__count">{{total}}</span><span

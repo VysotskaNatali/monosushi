@@ -32,7 +32,8 @@ import { AdminCategoryComponent } from './admin/admin-category/admin-category.co
 import { AdminProductComponent } from './admin/admin-product/admin-product.component';
 import { AdminOrderComponent } from './admin/admin-order/admin-order.component';
 import { AdminDiscountComponent } from './admin/admin-discount/admin-discount.component';
-
+import { AuthorizationComponent } from './pages/authorization/authorization.component';
+import { CabinetComponent } from './pages/cabinet/cabinet.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { AdminDiscountComponent } from './admin/admin-discount/admin-discount.co
     AdminProductComponent,
     AdminOrderComponent,
     AdminDiscountComponent,
-   
+    AuthorizationComponent,
+    CabinetComponent
   ],
   imports: [
     BrowserModule,

@@ -232,5 +232,21 @@
       ],
       "id": 10
     }
+  ],
+  "auth": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "123",
+      "fullName": "Petro Petriv",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "email": "user@gmail.com",
+      "password": "444",
+      "fullName": "Pavlo Pavliv",
+      "role": "USER"
+    }
   ]
 }

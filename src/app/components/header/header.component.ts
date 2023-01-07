@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ROLE } from 'src/app/shared/constans/role.constant';
 import { ICategoryResponse } from 'src/app/shared/interfaces/category/category.interface';
 import { IProductResponse } from 'src/app/shared/interfaces/product/product.interface';
+import { AccountService } from 'src/app/shared/services/account/account.service';
 import { CategoryService } from 'src/app/shared/services/category/category.service';
 import { OrderService } from 'src/app/shared/services/order/order.service';
 
@@ -16,16 +18,22 @@ export class HeaderComponent implements OnInit {
   public total = 0;
   public countBasket = 0;
   public openBasket = false;
+  public isLogin = false;
+  public loginUrl = '';
+  public loginPage = '';
 
   constructor(
     private categoryService: CategoryService,
-    private orderService: OrderService
+    private orderService: OrderService,
+    private accountService: AccountService
   ) {}
 
   ngOnInit(): void {
     this.loadCategory();
     this.loadBasket();
     this.updateBasket();
+    this.checkUserLogin();
+    this.checkUpdateUserLogin();
   }
   menuPop(): void {
     this.menu = !this.menu;
@@ -46,7 +54,9 @@ export class HeaderComponent implements OnInit {
   getTotalPrice(): void {
     this.total = this.basketArray.reduce(
       (total: number, prod: IProductResponse) =>
-        total + prod.count * prod.price,0);
+        total + prod.count * prod.price,
+      0
+    );
     this.countBasket = this.basketArray.length;
   }
 
@@ -70,5 +80,30 @@ export class HeaderComponent implements OnInit {
 
   order(): void {
     this.openBasket = false;
+  }
+
+  checkUserLogin(): void {
+    const currentUser = JSON.parse(
+      localStorage.getItem('currentUser') as string
+    );
+    if (currentUser && currentUser.role === ROLE.ADMIN) {
+      this.isLogin = true;
+      this.loginUrl = 'admin';
+      this.loginPage = 'Admin';
+    } else if (currentUser && currentUser.role === ROLE.USER) {
+      this.isLogin = true;
+      this.loginUrl = 'cabinet';
+      this.loginPage = 'Cabinet';
+    } else {
+      this.isLogin = false;
+      this.loginUrl = '';
+      this.loginPage = '';
+    }
+  }
+  
+  checkUpdateUserLogin(): void {
+    this.accountService.isUserLogin$.subscribe(() => {
+      this.checkUserLogin();
+    });
   }
 }
